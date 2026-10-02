@@ -12,7 +12,7 @@ const MAX_MSGS_PER_SEC = 200;
 // Values every fresh room starts with (the game reads "☁ Online" as its version number).
 const SEED = JSON.parse(process.env.SEED_VARS || '{"☁ Online":"16"}');
 
-const indexPath = path.join(__dirname, 'public', 'index.html');
+const indexPath = path.join(__dirname, 'index.html');
 const indexRaw = fs.readFileSync(indexPath);
 const indexGzip = zlib.gzipSync(indexRaw, { level: 9 });
 
